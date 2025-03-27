@@ -1,5 +1,5 @@
 # Drought forecasting
-This repository saves all the necessary code to replicate the results of the drought forecasting project
+This repository saves all the necessary code to replicate the results of the paper : **Drought forecasting using a hybrid neural architecture for integrating time series and static data.** Published as a workshop paper at "Tackling Climate Change with Machine Learning", ICLR 2025
 
 ## Requirements:
 To run the code from this repository, please ensure that your system meets the following requirements:
