@@ -1,0 +1,16 @@
+# pycache directory
+__pycache__/
+# src directory
+src/
+# src directory
+src/
+# data directory
+data/
+# models directory
+models/
+# logs directory
+runs/
+# results directory
+results/
+# txt files in the root directory (used to store the terminal logs)
+*.txt
