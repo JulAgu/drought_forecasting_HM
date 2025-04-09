@@ -14,3 +14,4 @@ runs/
 results/
 # txt files in the root directory (used to store the terminal logs)
 *.txt
+!requirements.txt
