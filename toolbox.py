@@ -99,8 +99,8 @@ def week_evaluation_loop(df, print_results=False):
     f1_list = []
     for w in range(6):
         wdf = df[df['week']==w]
-        mae = mean_absolute_error(wdf['y_true'], wdf['y_pred']).round(3)
-        f1 = f1_score(wdf['y_true'].round(),wdf['y_pred'].round(), average='macro').round(3)
+        mae = round(mean_absolute_error(wdf['y_true'], wdf['y_pred']), 3)
+        f1 = round(f1_score(wdf['y_true'].round(),wdf['y_pred'].round(), average='macro'), 3)
         mae_list.append(mae)
         f1_list.append(f1)
         if print_results:
@@ -127,10 +127,10 @@ def overall_evaluation_loop(df):
     y_true_for_sklearn = np.array([[0, 0, 0, 0, 0, 0] for i in y_true_roc])
     for i in range(len(y_true_roc)):
         y_true_for_sklearn[i, int(y_true_roc[i])] = 1
-    mae = mean_absolute_error(df['y_true'], df['y_pred']).round(3)
-    rmse = root_mean_squared_error(df['y_true'], df['y_pred']).round(3)
-    f1 = f1_score(y_true_roc, y_pred_roc, average='macro').round(3)
-    roc = roc_auc_score(y_true_for_sklearn, y_pred_for_sklearn, average='macro').round(3)
+    mae = round(mean_absolute_error(df['y_true'], df['y_pred']), 3)
+    rmse = round(root_mean_squared_error(df['y_true'], df['y_pred']), 3)
+    f1 = round(f1_score(y_true_roc, y_pred_roc, average='macro'), 3)
+    roc = round(roc_auc_score(y_true_for_sklearn, y_pred_for_sklearn, average='macro'), 3)
     return mae, rmse, f1, roc
 
 
